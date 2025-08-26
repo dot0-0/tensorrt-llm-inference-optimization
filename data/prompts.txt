@@ -1,0 +1,4 @@
+Explain the concept of attention in transformers in two sentences.
+List three use cases for large language models.
+Summarize why numerical stability matters for softmax calculations.
+Write a haiku about GPUs.

@@ -1,0 +1,9 @@
+Name,Total Time (ms)
+fmha_fwd,320
+rmsnorm,180
+gemm_qkv,150
+softmax,110
+rotary,90
+gemm_out,85
+layernorm,60
+token_cache_copy,40

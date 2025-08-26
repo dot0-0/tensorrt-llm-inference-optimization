@@ -1,0 +1,54 @@
+{
+  "framework": "tensorrt-llm",
+  "model": "LLaMA-2-7B",
+  "dtype": "bf16 (FMHA enabled)",
+  "device": "A100-80GB (example)",
+  "batch_size": 2,
+  "max_new_tokens": 128,
+  "total_new_tokens": 1045,
+  "total_time_sec": 7.877017903247353,
+  "tokens_per_sec": 132.66441854463628,
+  "per_batch": [
+    {
+      "batch_size": 2,
+      "new_tokens": 156,
+      "seconds": 1.0988059147012466
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 137,
+      "seconds": 1.0467224386765117
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 150,
+      "seconds": 0.8429284078190968
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 113,
+      "seconds": 1.0886657623126839
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 154,
+      "seconds": 1.0662407507354714
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 100,
+      "seconds": 1.0558868980365914
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 107,
+      "seconds": 0.8441567543511345
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 128,
+      "seconds": 0.8336109766146172
+    }
+  ],
+  "notes": "Mock TRT-LLM with FMHA; ~30% lower per-token latency; ~1.4x throughput"
+}

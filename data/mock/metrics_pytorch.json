@@ -1,0 +1,54 @@
+{
+  "framework": "pytorch/transformers",
+  "model": "meta-llama/Llama-2-7b-hf (or TinyLlama for CPU demo)",
+  "dtype": "bf16",
+  "device": "A100-80GB (example)",
+  "batch_size": 2,
+  "max_new_tokens": 128,
+  "total_new_tokens": 1045,
+  "total_time_sec": 11.027825064546294,
+  "tokens_per_sec": 94.76029896045448,
+  "per_batch": [
+    {
+      "batch_size": 2,
+      "new_tokens": 156,
+      "seconds": 1.5383282805817453
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 137,
+      "seconds": 1.4654114141471162
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 150,
+      "seconds": 1.1800997709467353
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 113,
+      "seconds": 1.5241320672377572
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 154,
+      "seconds": 1.4927370510296598
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 100,
+      "seconds": 1.4782416572512278
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 107,
+      "seconds": 1.1818194560915882
+    },
+    {
+      "batch_size": 2,
+      "new_tokens": 128,
+      "seconds": 1.167055367260464
+    }
+  ],
+  "notes": "Mock baseline on A100 for illustration"
+}
