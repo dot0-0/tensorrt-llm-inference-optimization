@@ -5,6 +5,13 @@ def load(path):
     with open(path, 'r') as f:
         return json.load(f)
 
+def per_token_lat(per_batch):
+    vals = []
+    for b in per_batch:
+        if b['new_tokens'] > 0 and b['seconds'] > 0:
+            vals.append(b['seconds'] / b['new_tokens'])
+    return (sum(vals)/len(vals)) if vals else 0.0
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--pytorch', default='metrics_pytorch.json')
@@ -16,14 +23,6 @@ def main():
 
     tps_pt, tps_tr = pt['tokens_per_sec'], tr['tokens_per_sec']
     tps_gain = tps_tr / tps_pt if tps_pt > 0 else 0.0
-
-    # Estimate per-token latency from per-batch stats
-    def per_token_lat(per_batch):
-        vals = []
-        for b in per_batch:
-            if b['new_tokens'] > 0 and b['seconds'] > 0:
-                vals.append(b['seconds'] / b['new_tokens'])
-        return sum(vals)/len(vals) if vals else 0.0
 
     lat_pt = per_token_lat(pt['per_batch'])
     lat_tr = per_token_lat(tr['per_batch'])
