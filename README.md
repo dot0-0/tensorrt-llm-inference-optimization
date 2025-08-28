@@ -12,8 +12,6 @@ End-to-end project benchmarking **PyTorch vs TensorRT-LLM** inference for **LLaM
 - ✅ **Triton kernel** demo: toy Scaled Dot-Product Attention  
 - ✅ Dynamic batching simulator  
 
-This repo matches resume bullets like:  
-> *“Integrated fused multi-head attention kernels with BF16 precision, reducing per-token latency by ~30% and improving tokens/sec by ~1.4× on A100 GPUs.”*
 
 ---
 
